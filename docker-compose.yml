@@ -9,6 +9,11 @@ services:
         command: >
             postgres
               -c wal_level=logical
+              -c max_replication_slots=10
+              -c max_logical_replication_workers=4
+              -c max_sync_workers_per_subscription=2
+              -c max_worker_processes=8
+              -c max_wal_senders=10
         volumes:
         - ./volumes/postgres1/:/var/lib/postgresql/data/
 
@@ -18,5 +23,13 @@ services:
             POSTGRES_USER: postgres
             POSTGRES_DB: postgres
             POSTGRES_PASSWORD: password
+        command: >
+            postgres
+              -c wal_level=logical
+              -c max_replication_slots=10
+              -c max_logical_replication_workers=4
+              -c max_sync_workers_per_subscription=2
+              -c max_worker_processes=8
+              -c max_wal_senders=10
         volumes:
         - ./volumes/postgres2/:/var/lib/postgresql/data/
