@@ -1,7 +1,5 @@
 # PostgreSQL 12 logical replication playground
 
-Project Status: Work in Progress, see [issues](https://github.com/stephane-klein/postgresql-logical-replication-playground/issues) for more informaiton.
-
 PostgreSQL 12 [logical replication](https://www.postgresql.org/docs/current/logical-replication.html) playground, based on this documentation: [Logical Replication in PostgreSQL Explained](https://www.enterprisedb.com/postgres-tutorials/logical-replication-postgresql-explained)
 
 ```
